@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.mako{
+    width: 100%;
+    text-align: center;
+    font-family: "Kanit", sans-serif
+}
+
+ /* são 1h24 da manha, eu queria tar dormindo mas nãaaaooo, ta eu aqui me quebrando todo pra colocar uma caixa no centro da pagina
+ TUDO POR CAUSA DE UMA MERA CAIXA */
+.mako2{
+    width: 300px;
+    display: inline-block;
+    padding: 30px;
+    border: solid black 2px;
+    box-sizing: border-box;
+    margin-top: 60px;
+    background-color: azure;
+    font-family: "Kanit", sans-serif
+}
+
+/* 12h20 do dia seguinte e eu finalmente consegui, ta funcionando :3
+agora eu vou começar a anotar um pouco as coisas par reler, principalmente oque eu não conheço */
+
+.bodvar {
+    display: inline-block;
+    border: none;
+    padding: 0;
+    cursor: pointer; /* Mostra o cursor de mão ao passar o mouse */
+}
+
+.bodvar {
+    width: 100px;
+    height: 200px;
+    border-radius: 5px;
+    transition: transform 0.5s ease; /* Transição suave para efeitos de hover */
+}
+
+.bodvar {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse. PS: isso me tirou muito do serio */
+}
+
+.jaeyun{
+    background-color: rgb(237, 219, 207);
+}
+
+.kor{
+    text-align: left;
+}
+
+.kor2{
+    text-align: center;
+}
+
+.kor3{
+    text-align: right;
+}
+
+.kor, .kor2, .kor3{
+    font-family: "Kanit", sans-serif;
+    color: rgb(111, 224, 111);
+}

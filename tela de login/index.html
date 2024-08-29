@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>cadastro e login</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body class="jaeyun">
+             <!--2 dias depois e agora eu vou fazer oque seria a aba do site, porque se eu deixar muito simples, vão falar
+             que eu não me dediquei, provavelmente falar q ta muito simples, mas eu vou fazer oque, é dificil fazer um site bom
+             e responsivo ao mesmo tempo, se uma ou outra coisa não buga, o site fica só pra pc ou mobile, não da pra manter a mesma
+             qualidade em tudo, e sim, sei q se vai ler tudo, sei q se vai ver q eu escrevi muita coisa errado, mas olha só
+             se pelo menos vai ver que eu estou me frustrando de verdade e fazendo trocentas mil coisas em casa junto :D 
+             (alguém me mata pfvnão aguento mais essas criança em casa MEU DEUS)  -->
+
+           <div>
+              <h2><a href="home.html" class="bodvar">
+                <img src="IMG/site_home_img.png" alt="Ir para Home" style="width: 140px;">
+            </a></h2>
+           </div>
+
+        <div class="mako">
+            <div class="mako2">
+             <h1> cadastro</h1>
+              <h3><a href="login.html"> Já possuo uma conta </a></h3>
+              <p><form onsubmit="event.preventDefault(); validarFormulario();">
+                <label for="nome">Insira seu nome completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome completo"><br><br>
+            
+                <label for="email">Insira seu e-mail:</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com"><br><br>
+
+                <label for="telefone">Número de Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required><br><br>           
+
+                <label for="senha">Insira sua senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Senha"><br><br>
+
+                <label for="confirmarSenha">Confirme sua senha:</label>
+                <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha"><br><br>
+                
+                <input type="checkbox" id="concordo" name="concordo">
+                <label for="concordo">Li e concordo com os termos de uso do site</label><br><br>
+
+                <input type="checkbox" id="informar ?" name="informar ?">
+                <label for="informar ?">Desejo ser informado sobre futuras informações do site</label><br><br>
+               <br>
+                <button type="button" onclick="validarFormulario()">Enviar</button>
+            </form>
+              </p>
+             </div> 
+        </div>
+
+       <!-- eu to a quase 6 horas nisso, eu to cansado, e eu tenho certeza de que não vou conseguir explicar metade dos codigos 
+        por nervosismo, q merda viu -->
+
+
+        <script>
+            function validarFormulario() {
+                var nome = document.getElementById("nome").value;
+                var email = document.getElementById("email").value;
+    
+                if (nome === "") {
+                    alert("Por favor, preencha o campo do nome completo.");
+                } else if (email === "") {
+                    alert("Por favor, preencha o campo do e-mail.");
+                } else if (confirmarSenha === "") {
+                alert("Por favor, confirme sua senha.");
+                } else if (senha !== confirmarSenha) {
+                alert("As senhas não coincidem. Por favor, tente novamente.");
+                if (telefone === "") {
+            alert("Por favor, preencha o campo de número de telefone.");
+            event.preventDefault();
+        }
+            } else {
+                alert("Formulário enviado com sucesso!");
+            }
+        } 
+            
+        </script>
+
+        <!-- HAHHAHAHAHAHHA, 2 DIAS PRA PROGAMAR ESSA MERDA PRA NO FINAL TODO O PROBLEMA ESTAVA EM UM PARENTESI QUE EU NÃO VI Q 
+         ESTAVA FALTANDO AAAAAAAAAAAAAAAAA -->
+         <!-- 6 dias, 2 de descanço e todos os outros quebrando a cabeça -->
+    </body>

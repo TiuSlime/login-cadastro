@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>cadastro e login</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body class="jaeyun">
+
+        <div>
+            <h2><a href="home.html" class="bodvar">
+              <img src="IMG/site_home_img.png" alt="Ir para Home" style="width: 140px;">
+          </a></h2>
+         </div>
+
+        
+    <form id="loginForm" class="form" onsubmit="return validarLogin()">
+    <div class="mako">
+        <div class="mako2">
+
+            <h1>login</h1>
+             <h3><a href="index.html"> criar conta </a></h3>
+            <label for="loginEmail">E-mail ou Nome de Usuário:</label>
+            <input type="text" id="loginEmail" name="loginEmail" required><br><br>
+
+            <label for="loginSenha">Senha:</label>
+            <input type="password" id="loginSenha" name="loginSenha" required><br><br>
+            
+            <input type="checkbox" id="manter" name="manter">
+            <label for="manter">Desejo manterme logado</label><br><br>
+            <br>        
+
+          <button type="submit">Entrar</button>
+         </form>
+        </div>
+    </div>
+
+    <script>
+        function showForm(formId) {
+            document.getElementById('cadastroForm').classList.remove('active');
+            document.getElementById('loginForm').classList.remove('active');
+            document.getElementById('btnCadastro').classList.remove('active');
+            document.getElementById('btnLogin').classList.remove('active');
+        
+            document.getElementById(formId).classList.add('active');
+        
+            if (formId === 'cadastroForm') {
+                document.getElementById('btnCadastro').classList.add('active');
+            } else {
+                document.getElementById('btnLogin').classList.add('active');
+            }
+        }
+        
+        function validarCadastro() {
+            const nomeCompleto = document.getElementById('nomeCompleto').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const senha = document.getElementById('senha').value;
+            const confirmarSenha = document.getElementById('confirmarSenha').value;
+        
+            if (!nomeCompleto || !email || !telefone || !senha || !confirmarSenha) {
+                alert('Por favor, preencha todos os campos.');
+                return false;
+            }
+        
+            if (senha !== confirmarSenha) {
+                alert('As senhas não coincidem. Por favor, verifique novamente.');
+                return false;
+            }
+        
+            alert('Cadastro realizado com sucesso!');
+            return true;
+        }
+        
+        function validarLogin() {
+            const loginEmail = document.getElementById('loginEmail').value;
+            const loginSenha = document.getElementById('loginSenha').value;
+        
+            if (!loginEmail || !loginSenha) {
+                alert('Por favor, preencha todos os campos.');
+                return false;
+            }
+        
+            if (loginEmail !== "usuario@teste.com" || loginSenha !== "1234") {
+                alert('E-mail ou senha incorretos. Tente novamente.');
+                return false;
+            }
+        
+            alert('Login realizado com sucesso!');
+            return true;
+        }
+        </script>
+    </body>
